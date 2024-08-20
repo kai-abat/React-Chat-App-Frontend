@@ -32,6 +32,7 @@ interface ChatContextType {
   messages: MessageInfoType[] | null;
   isMessagesLoading: boolean;
   messagesError: string | null;
+  sendTextMessageError: string | null;
   currentChat: ChatInfoType | null;
   sendTextMessage: (
     textMessage: string,
@@ -422,6 +423,7 @@ export const ChatContextProvider = ({
         markAllNotification,
         markAsReadThisNotification,
         newMessage,
+        sendTextMessageError,
       }}
     >
       {children}
